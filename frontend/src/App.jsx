@@ -7,7 +7,6 @@ import { AuthProvide } from './context/AuthContext'
 import { useEffect, useState } from 'react'
 import Loading from './components/Loading'
 
-
 function App() {
 
   const [loading, setLoading] = useState(true);
@@ -42,3 +41,4 @@ function App() {
 }
 
 export default App
+console.log('App is rendering...');

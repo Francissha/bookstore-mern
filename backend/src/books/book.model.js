@@ -1,15 +1,15 @@
-const mongoose = require('mongoose');
+const mongoose =  require('mongoose');
 
 const bookSchema = new mongoose.Schema({
     title: {
         type: String,
-        required: true, // Confirms true if the book title is added
+        required: true,
     },
-    description: {
+    description:  {
         type: String,
         required: true,
     },
-    category: {
+    category:  {
         type: String,
         required: true,
     },
@@ -25,19 +25,18 @@ const bookSchema = new mongoose.Schema({
         type: Number,
         required: true,
     },
-        newPrice: {
+    newPrice: {
         type: Number,
         required: true,
     },
-    
     createdAt: {
         type: Date,
         default: Date.now,
     }
-}, {
-    timestamps: true, // Adds `createdAt` and `updatedAt` automatically
-});
+  }, {
+    timestamps: true,
+  });
 
-const Book = mongoose.model('Book', bookSchema);
+  const Book = mongoose.model('Book', bookSchema);
 
-module.exports = Book;
+  module.exports = Book;
